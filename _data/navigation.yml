@@ -1,7 +1,7 @@
 # main links
 main:
 sidebar-category:
-  - title: test1
+  - title: 프로그래밍
     children:
       - title: "testtitle"
         url: "/testurl"
