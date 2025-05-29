@@ -1,5 +1,20 @@
 # main links
 main:
+sidebar-category:
+  - title: test1
+    children:
+      - title: "testtitle"
+        url: "/testurl"
+        category: "testctg"
+  - title: test2
+    children:
+      - title: "testtitle2"
+        url: "/testurl2"
+        category: "testctg2"
+
+
+
+
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
@@ -10,3 +25,5 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+
