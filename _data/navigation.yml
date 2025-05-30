@@ -1,19 +1,11 @@
 # main links
 main:
 sidebar-category:
-  - title: 프로그래밍
+  - title: Python
     children:
-      - title: "testtitle"
-        url: "/testurl"
-        category: "testctg"
-  - title: test2
-    children:
-      - title: "testtitle2"
-        url: "/testurl2"
-        category: "testctg2"
-
-
-
+      - title: "Python 기초"
+        url: "/python_basic"
+        category: "python_basic"
 
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/

@@ -1,7 +1,7 @@
 ---
-title: "test"
+title: "페이지 카테고리 이름"
 layout: archive
-permalink: /test
+permalink: /python_basic
 author_profile: true
 sidebar:
     nav: "sidebar-category"
