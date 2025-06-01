@@ -4,7 +4,7 @@ sidebar-category:
   - title: Python
     children:
       - title: "Python 기초"
-        url: "/python_basic"
+        url: "categories/python_basic"
         category: "python_basic"
 
   # - title: "Quick-Start Guide"

@@ -324,5 +324,4 @@ defaults:
       comments: true
       share: false
       related: true
-      sidebar:
-        nav: "sidebar-category"
+      sidebar_main: true
