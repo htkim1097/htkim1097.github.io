@@ -6,6 +6,11 @@ sidebar-category:
       - title: "Python 기초"
         url: "categories/python_basic"
         category: "python_basic"
+  - title: HTML
+    children:
+      - title: "MarkDown 문법"
+        url: "categories/MarkDown"
+        category: "MarkDown"
 
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
