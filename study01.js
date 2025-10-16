@@ -18,17 +18,19 @@ function main() {
     const renderer = new THREE.WebGLRenderer({antialias: true, canvas});
 
     // 원근 카메라 생성
-    const fov = 75;     // field of view(시야각) 수직면 75도로 설정(원근 카메라만 degree 사용, 나머지는 radian 사용)
+    const fov = 40;     // field of view(시야각) 수직면 75도로 설정(원근 카메라만 degree 사용, 나머지는 radian 사용)
     const aspect = 2;   // 가로 세로 비율(캔버스 기본 설정 크기가 300x150이라서 300/150=2를 설정)
     const near = 0.1;   // 카메라 앞에 렌더링 되는 공간 범위. 이 공간을 넘어간 요소는 렌더링 되지 않음
-    const far = 5;
+    const far = 1000;
     const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+    camera.position.set(0, 2, 5);
 
     // 카메라 위치 설정
-    camera.position.z = 2;
+    camera.position.z = 120;
 
     // Scene 객체 생성
     const scene = new THREE.Scene();
+    scene.background = new THREE.Color('lightblue');
 
     // 광원 생성
     const color = 0xFFFFFF;
@@ -52,9 +54,16 @@ function main() {
 
     // Scene 객체에 Mesh 객체를 넣음
     // scene.add(cube);
+    {
+        const groundSize = 400;
+        const groundGeometry = new THREE.PlaneGeometry(groundSize, groundSize);
+        const groundMaterial = new THREE.MeshPhongMaterial({color: 'gray'});
+        const mesh = new THREE.Mesh(groundGeometry, groundMaterial);
+        mesh.rotation.x = Math.PI * -0.5;
+        scene.add(mesh);
+    }
+    
 
-    // 렌더링
-    renderer.render(scene, camera);
 
     function makeInstance(geometry, color, x) {
         const material = new THREE.MeshPhongMaterial({color});
@@ -113,6 +122,7 @@ function main() {
             cube.rotation.y = rot;
         });
 
+        // 렌더링
         renderer.render(scene, camera);
 
         // 브라우저에 애니메이션 프레임을 요청하는 함수
