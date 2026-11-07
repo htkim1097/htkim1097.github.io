@@ -1,0 +1,20 @@
+title: "나의 노트장"
+description: "개발과 기술 학습 기록"
+author: "HTKIM"
+
+url: "https://htkim1097.github.io"
+baseurl: ""
+
+lang: "ko-KR"
+timezone: "Asia/Seoul"
+
+markdown: kramdown
+permalink: /:categories/:year/:month/:day/:title/  # 게시글 url 구조 설정
+
+plugins: []
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
