@@ -1,28 +1,52 @@
+
 ---
 layout: default
 ---
 
-<article>
-  <h1>{{ page.title }}</h1>
+<article class="post">
 
-  <p>
-    {{ page.date | date: "%Y-%m-%d" }}
-  </p>
+  <header class="post-header">
 
-  {% if page.categories.size > 0 %}
-    <p>
-      카테고리:
-      {{ page.categories | join: ", " }}
-    </p>
-  {% endif %}
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%Y.%m.%d" }}
+      </time>
+    </div>
 
-  <hr>
+    <h1 class="post-title">{{ page.title }}</h1>
 
-  <div>
+    {% if page.description %}
+      <p class="post-description">
+        {{ page.description }}
+      </p>
+    {% endif %}
+
+    {% if page.categories.size > 0 %}
+      <div class="post-categories">
+        {% for category in page.categories %}
+          <span class="category-label">{{ category }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if page.tags.size > 0 %}
+      <div class="post-tags">
+        {% for tag in page.tags %}
+          <span class="tag-label">#{{ tag }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+  </header>
+
+  <div class="post-content">
     {{ content }}
   </div>
-</article>
 
-<p>
-  <a href="{{ '/' | relative_url }}">← 목록으로</a>
-</p>
+  <div class="post-navigation">
+    <a href="{{ '/' | relative_url }}">
+      ← 모든 게시글 보기
+    </a>
+  </div>
+
+</article>
