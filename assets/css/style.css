@@ -363,3 +363,109 @@ a:hover {
     font-size: 12px;
   }
 }
+
+
+/* ------------------------------
+   테마 전환 버튼
+------------------------------ */
+
+.site-nav {
+  align-items: center;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 10px;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background: #f2f2f2;
+}
+
+
+/* ------------------------------
+   다크 모드
+------------------------------ */
+
+html[data-theme="dark"] body {
+  background: #17191c;
+  color: #e5e7eb;
+}
+
+html[data-theme="dark"] a:hover {
+  color: #93b4ff;
+}
+
+html[data-theme="dark"] .site-header,
+html[data-theme="dark"] .site-footer,
+html[data-theme="dark"] .post-header,
+html[data-theme="dark"] .post-navigation,
+html[data-theme="dark"] .post-list,
+html[data-theme="dark"] .post-item {
+  border-color: #33373d;
+}
+
+html[data-theme="dark"] .site-description,
+html[data-theme="dark"] .site-nav,
+html[data-theme="dark"] .post-meta,
+html[data-theme="dark"] .post-item-meta,
+html[data-theme="dark"] .post-excerpt,
+html[data-theme="dark"] .home-intro p,
+html[data-theme="dark"] .post-description,
+html[data-theme="dark"] .empty-post {
+  color: #a1a1aa;
+}
+
+html[data-theme="dark"] .category-label {
+  background: #303640;
+  color: #cbd5e1;
+}
+
+html[data-theme="dark"] .tag-label {
+  color: #a1a1aa;
+}
+
+html[data-theme="dark"] .post-content blockquote {
+  background: #22262b;
+  border-left-color: #64748b;
+  color: #cbd5e1;
+}
+
+html[data-theme="dark"] .post-content pre {
+  background: #22262b;
+}
+
+html[data-theme="dark"] .post-content code {
+  color: #e5e7eb;
+}
+
+html[data-theme="dark"] .post-content :not(pre) > code {
+  background: #303640;
+}
+
+html[data-theme="dark"] .post-content th {
+  background: #292e35;
+}
+
+html[data-theme="dark"] .post-content th,
+html[data-theme="dark"] .post-content td {
+  border-color: #41464e;
+}
+
+html[data-theme="dark"] .theme-toggle {
+  border-color: #4b5563;
+  color: #e5e7eb;
+}
+
+html[data-theme="dark"] .theme-toggle:hover {
+  background: #303640;
+}
