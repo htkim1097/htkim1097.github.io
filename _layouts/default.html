@@ -76,6 +76,15 @@
 
   </div>
 
+  <button
+    id="back-to-top"
+    class="back-to-top"
+    type="button"
+    aria-label="페이지 상단으로 이동"
+  >
+    ↑
+  </button>
+
   <script>
     const themeButton = document.getElementById("theme-toggle");
     const themeIcon = document.getElementById("theme-icon");
@@ -107,6 +116,23 @@
         document.documentElement.getAttribute("data-theme");
 
       setTheme(current === "dark" ? "light" : "dark");
+    });
+
+    const backToTopButton = document.getElementById("back-to-top");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) {
+        backToTopButton.classList.add("visible");
+      } else {
+        backToTopButton.classList.remove("visible");
+      }
+    });
+
+    backToTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     });
   </script>
 </body>

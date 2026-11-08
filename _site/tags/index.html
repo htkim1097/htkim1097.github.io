@@ -73,23 +73,16 @@
     
     
 
-    <section class="archive-group" id="jekyll">
+    <section class="archive-group" id="공부방법">
 
-      <h2>#Jekyll</h2>
+      <h2>#공부방법</h2>
 
       <ul class="archive-post-list">
         
           <li>
-            <time>2026.11.07</time>
-            <a href="/%EA%B0%9C%EB%B0%9C/2026/11/07/first-post/">
-              첫 번째 게시글
-            </a>
-          </li>
-        
-          <li>
-            <time>2026.11.07</time>
-            <a href="/%EA%B0%9C%EB%B0%9C/2026/11/07/Git-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95-01-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EC%A4%80%EB%B9%84/">
-              Git 블로그 구축 01
+            <time>2026.11.08</time>
+            <a href="/%EA%B0%9C%EB%B0%9C/2026/11/08/IT-%EB%85%B8%ED%8A%B8-%EC%A0%95%EB%A6%AC-%ED%8C%81/">
+              IT 노트 정리 팁
             </a>
           </li>
         
@@ -100,23 +93,56 @@
     
     
 
-    <section class="archive-group" id="github">
+    <section class="archive-group" id="jekyll">
 
-      <h2>#GitHub</h2>
+      <h2>#Jekyll</h2>
 
       <ul class="archive-post-list">
         
           <li>
-            <time>2026.11.07</time>
-            <a href="/%EA%B0%9C%EB%B0%9C/2026/11/07/first-post/">
-              첫 번째 게시글
+            <time>2026.11.08</time>
+            <a href="/%EA%B0%9C%EB%B0%9C/2026/11/08/build-jekyll-blog-on-windows/">
+              Windows 환경에서 Jekyll과 GitHub Pages로 기술 블로그 구축하기
             </a>
           </li>
         
+      </ul>
+
+    </section>
+  
+    
+    
+
+    <section class="archive-group" id="github-pages">
+
+      <h2>#GitHub Pages</h2>
+
+      <ul class="archive-post-list">
+        
           <li>
-            <time>2026.11.07</time>
-            <a href="/%EA%B0%9C%EB%B0%9C/2026/11/07/Git-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95-01-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EC%A4%80%EB%B9%84/">
-              Git 블로그 구축 01
+            <time>2026.11.08</time>
+            <a href="/%EA%B0%9C%EB%B0%9C/2026/11/08/build-jekyll-blog-on-windows/">
+              Windows 환경에서 Jekyll과 GitHub Pages로 기술 블로그 구축하기
+            </a>
+          </li>
+        
+      </ul>
+
+    </section>
+  
+    
+    
+
+    <section class="archive-group" id="ruby">
+
+      <h2>#Ruby</h2>
+
+      <ul class="archive-post-list">
+        
+          <li>
+            <time>2026.11.08</time>
+            <a href="/%EA%B0%9C%EB%B0%9C/2026/11/08/build-jekyll-blog-on-windows/">
+              Windows 환경에서 Jekyll과 GitHub Pages로 기술 블로그 구축하기
             </a>
           </li>
         
@@ -134,16 +160,9 @@
       <ul class="archive-post-list">
         
           <li>
-            <time>2026.11.07</time>
-            <a href="/%EA%B0%9C%EB%B0%9C/2026/11/07/first-post/">
-              첫 번째 게시글
-            </a>
-          </li>
-        
-          <li>
-            <time>2026.11.07</time>
-            <a href="/%EA%B0%9C%EB%B0%9C/2026/11/07/Git-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95-01-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EC%A4%80%EB%B9%84/">
-              Git 블로그 구축 01
+            <time>2026.11.08</time>
+            <a href="/%EA%B0%9C%EB%B0%9C/2026/11/08/build-jekyll-blog-on-windows/">
+              Windows 환경에서 Jekyll과 GitHub Pages로 기술 블로그 구축하기
             </a>
           </li>
         
@@ -154,16 +173,16 @@
     
     
 
-    <section class="archive-group" id="공부방법">
+    <section class="archive-group" id="git">
 
-      <h2>#공부방법</h2>
+      <h2>#Git</h2>
 
       <ul class="archive-post-list">
         
           <li>
             <time>2026.11.08</time>
-            <a href="/%EA%B0%9C%EB%B0%9C/2026/11/08/IT-%EB%85%B8%ED%8A%B8-%EC%A0%95%EB%A6%AC-%ED%8C%81/">
-              IT 노트 정리 팁
+            <a href="/%EA%B0%9C%EB%B0%9C/2026/11/08/build-jekyll-blog-on-windows/">
+              Windows 환경에서 Jekyll과 GitHub Pages로 기술 블로그 구축하기
             </a>
           </li>
         
@@ -184,6 +203,15 @@
     </footer>
 
   </div>
+
+  <button
+    id="back-to-top"
+    class="back-to-top"
+    type="button"
+    aria-label="페이지 상단으로 이동"
+  >
+    ↑
+  </button>
 
   <script>
     const themeButton = document.getElementById("theme-toggle");
@@ -216,6 +244,23 @@
         document.documentElement.getAttribute("data-theme");
 
       setTheme(current === "dark" ? "light" : "dark");
+    });
+
+    const backToTopButton = document.getElementById("back-to-top");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) {
+        backToTopButton.classList.add("visible");
+      } else {
+        backToTopButton.classList.remove("visible");
+      }
+    });
+
+    backToTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     });
   </script>
 </body>

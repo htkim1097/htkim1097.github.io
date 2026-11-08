@@ -104,6 +104,18 @@
 
   </header>
 
+  
+    <nav
+      id="post-toc"
+      class="post-toc"
+      aria-label="게시글 목차"
+      hidden
+    >
+      <h2>목차</h2>
+      <ul id="post-toc-list"></ul>
+    </nav>
+  
+
   <div class="post-content">
     <h1 id="공부한-내용을-기록하는-것과-기억하는-것은-다른-것이다">공부한 내용을 기록하는 것과 기억하는 것은 다른 것이다</h1>
 
@@ -239,11 +251,40 @@ Docker Compose로 간단한 서비스 구축하기.</p>
 
   </div>
 
-  <div class="post-navigation">
+  <nav class="post-navigation" aria-label="게시글 이동">
+
+    <div class="post-navigation-item">
+      
+    </div>
+
+    <div class="post-navigation-item next">
+      
+        <span>다음 글</span>
+        <a href="/%EA%B0%9C%EB%B0%9C/2026/11/08/build-jekyll-blog-on-windows/">
+          Windows 환경에서 Jekyll과 GitHub Pages로 기술 블로그 구축하기 →
+        </a>
+      
+    </div>
+
+  </nav>
+
+  <div class="back-to-list">
     <a href="/">
       ← 모든 게시글 보기
     </a>
   </div>
+
+  
+    <script
+      src="/assets/js/toc.js"
+      defer
+    ></script>
+  
+
+  <script
+    src="/assets/js/code-copy.js"
+    defer
+  ></script>
 
 </article>
 
@@ -257,6 +298,15 @@ Docker Compose로 간단한 서비스 구축하기.</p>
     </footer>
 
   </div>
+
+  <button
+    id="back-to-top"
+    class="back-to-top"
+    type="button"
+    aria-label="페이지 상단으로 이동"
+  >
+    ↑
+  </button>
 
   <script>
     const themeButton = document.getElementById("theme-toggle");
@@ -289,6 +339,23 @@ Docker Compose로 간단한 서비스 구축하기.</p>
         document.documentElement.getAttribute("data-theme");
 
       setTheme(current === "dark" ? "light" : "dark");
+    });
+
+    const backToTopButton = document.getElementById("back-to-top");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) {
+        backToTopButton.classList.add("visible");
+      } else {
+        backToTopButton.classList.remove("visible");
+      }
+    });
+
+    backToTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     });
   </script>
 </body>

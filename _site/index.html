@@ -91,6 +91,48 @@
           </div>
 
           <h3>
+            <a href="/%EA%B0%9C%EB%B0%9C/2026/11/08/build-jekyll-blog-on-windows/">
+              Windows 환경에서 Jekyll과 GitHub Pages로 기술 블로그 구축하기
+            </a>
+          </h3>
+
+          <p class="post-excerpt">
+            Windows 환경에서 Ruby와 Jekyll을 설치하고 GitHub Pages를 이용해 기술 블로그를 구축한 과정을 정리합니다.
+          </p>
+
+          
+            <div class="post-tags">
+              
+                <span class="tag-label">#Jekyll</span>
+              
+                <span class="tag-label">#GitHub Pages</span>
+              
+                <span class="tag-label">#Ruby</span>
+              
+                <span class="tag-label">#Markdown</span>
+              
+                <span class="tag-label">#Git</span>
+              
+            </div>
+          
+
+        </article>
+
+      
+
+        <article class="post-item">
+
+          <div class="post-item-meta">
+            2026.11.08
+
+            
+              <span class="category-label">
+                개발
+              </span>
+            
+          </div>
+
+          <h3>
             <a href="/%EA%B0%9C%EB%B0%9C/2026/11/08/IT-%EB%85%B8%ED%8A%B8-%EC%A0%95%EB%A6%AC-%ED%8C%81/">
               IT 노트 정리 팁
             </a>
@@ -105,89 +147,6 @@
             <div class="post-tags">
               
                 <span class="tag-label">#공부방법</span>
-              
-            </div>
-          
-
-        </article>
-
-      
-
-        <article class="post-item">
-
-          <div class="post-item-meta">
-            2026.11.07
-
-            
-              <span class="category-label">
-                개발
-              </span>
-            
-          </div>
-
-          <h3>
-            <a href="/%EA%B0%9C%EB%B0%9C/2026/11/07/first-post/">
-              첫 번째 게시글
-            </a>
-          </h3>
-
-          <p class="post-excerpt">
-            GitHub Pages와 Jekyll을 이용해
-나만의 기술 블로그를 구축하고 있다.
-
-          </p>
-
-          
-            <div class="post-tags">
-              
-                <span class="tag-label">#Jekyll</span>
-              
-                <span class="tag-label">#GitHub</span>
-              
-                <span class="tag-label">#Markdown</span>
-              
-            </div>
-          
-
-        </article>
-
-      
-
-        <article class="post-item">
-
-          <div class="post-item-meta">
-            2026.11.07
-
-            
-              <span class="category-label">
-                개발
-              </span>
-            
-          </div>
-
-          <h3>
-            <a href="/%EA%B0%9C%EB%B0%9C/2026/11/07/Git-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95-01-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EC%A4%80%EB%B9%84/">
-              Git 블로그 구축 01
-            </a>
-          </h3>
-
-          <p class="post-excerpt">
-            
-  실습일: 2026-11-07
-  목표: Windows에서 VS Code를 이용해 Jekyll 기반 Git 블로그 개발 환경 구축
-  기술: Git, GitHub, Ruby, Jekyll
-
-
-          </p>
-
-          
-            <div class="post-tags">
-              
-                <span class="tag-label">#Jekyll</span>
-              
-                <span class="tag-label">#GitHub</span>
-              
-                <span class="tag-label">#Markdown</span>
               
             </div>
           
@@ -211,6 +170,15 @@
     </footer>
 
   </div>
+
+  <button
+    id="back-to-top"
+    class="back-to-top"
+    type="button"
+    aria-label="페이지 상단으로 이동"
+  >
+    ↑
+  </button>
 
   <script>
     const themeButton = document.getElementById("theme-toggle");
@@ -243,6 +211,23 @@
         document.documentElement.getAttribute("data-theme");
 
       setTheme(current === "dark" ? "light" : "dark");
+    });
+
+    const backToTopButton = document.getElementById("back-to-top");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) {
+        backToTopButton.classList.add("visible");
+      } else {
+        backToTopButton.classList.remove("visible");
+      }
+    });
+
+    backToTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     });
   </script>
 </body>
