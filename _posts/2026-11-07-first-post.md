@@ -6,8 +6,6 @@ categories: [개발]
 tags: [Jekyll, GitHub, Markdown]
 ---
 
-# 첫 번째 게시글
-
 GitHub Pages와 Jekyll을 이용해
 나만의 기술 블로그를 구축하고 있다.
 
