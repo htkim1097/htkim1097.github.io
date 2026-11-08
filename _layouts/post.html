@@ -1,4 +1,3 @@
-
 ---
 layout: default
 ---
@@ -24,7 +23,12 @@ layout: default
     {% if page.categories.size > 0 %}
       <div class="post-categories">
         {% for category in page.categories %}
-          <span class="category-label">{{ category }}</span>
+          <a
+            class="category-label"
+            href="{{ '/categories/' | relative_url }}#{{ category | slugify }}"
+          >
+            {{ category }}
+          </a>
         {% endfor %}
       </div>
     {% endif %}
@@ -32,7 +36,12 @@ layout: default
     {% if page.tags.size > 0 %}
       <div class="post-tags">
         {% for tag in page.tags %}
-          <span class="tag-label">#{{ tag }}</span>
+          <a
+            class="tag-label"
+            href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}"
+          >
+            #{{ tag }}
+          </a>
         {% endfor %}
       </div>
     {% endif %}

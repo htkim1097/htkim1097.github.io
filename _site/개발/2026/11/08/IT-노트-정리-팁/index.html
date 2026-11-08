@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    
+      IT 노트 정리 팁 | 나의 노트장
+    
+  </title>
+
+  <meta name="description"
+        content="개발과 기술 학습 기록">
+
+  <link rel="stylesheet"
+        href="/assets/css/style.css">
+
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("blog-theme");
+      const systemDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+
+      const theme = savedTheme || (systemDark ? "dark" : "light");
+
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+</head>
+
+<body>
+  <div class="site-wrapper">
+
+    <header class="site-header">
+      <a class="site-title" href="/">
+        나의 노트장
+      </a>
+
+      <p class="site-description">
+        개발과 기술 학습 기록
+      </p>
+
+      <nav class="site-nav">
+        <a href="/">Home</a>
+        <a href="/categories/">카테고리</a>
+        <a href="/tags/">태그</a>
+
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          type="button"
+          aria-label="테마 변경"
+        >
+          <span id="theme-icon">☾</span>
+          <span id="theme-label">다크 모드</span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      <article class="post">
+
+  <header class="post-header">
+
+    <div class="post-meta">
+      <time datetime="2026-11-08T14:00:00+09:00">
+        2026.11.08
+      </time>
+    </div>
+
+    <h1 class="post-title">IT 노트 정리 팁</h1>
+
+    
+
+    
+      <div class="post-categories">
+        
+          <a
+            class="category-label"
+            href="/categories/#개발"
+          >
+            개발
+          </a>
+        
+      </div>
+    
+
+    
+      <div class="post-tags">
+        
+          <a
+            class="tag-label"
+            href="/tags/#공부방법"
+          >
+            #공부방법
+          </a>
+        
+      </div>
+    
+
+  </header>
+
+  <div class="post-content">
+    <h1 id="공부한-내용을-기록하는-것과-기억하는-것은-다른-것이다">공부한 내용을 기록하는 것과 기억하는 것은 다른 것이다</h1>
+
+<p>노트 중심의 학습이 아닌 -&gt; 실습 + 회상(기억 꺼내기) 중심의 학습.
+노트는 공부한 내용을 전부 보관하는 창고가 아닌, 나중에 다시 시작할 수 있도록 도와주는 안내서 정도면 충분.</p>
+
+<h1 id="공부와-기록의-비율">공부와 기록의 비율</h1>
+<p>1시간 공부 시 대략 비율</p>
+<ul>
+  <li>36분 실습 및 학습</li>
+  <li>15분 기억을 꺼내는 복습</li>
+  <li>
+    <p>9분 노트 작성</p>
+  </li>
+  <li>공부한 내용을 전부다 기록x</li>
+  <li>핵심 개념과 내용, 비교 및 분석, 해결 방법, 참고 사항, 내가 해본 것 등을 적는 것.</li>
+</ul>
+
+<h1 id="노트에-작성할-3가지">노트에 작성할 3가지</h1>
+<ol>
+  <li>개념 노트 : 기술의 핵심 원리와 개념을 간단하게 기록</li>
+  <li>실습 노트 : 직접 실행한 명령어, 설정, 오류와 해결 방법 등</li>
+  <li>복습 노트 : 자료를 보지 않고 스스로 설명할 수 있는지 확인(스스로에게 주는 질문이자 테스트)</li>
+</ol>
+
+<ul>
+  <li>긴 설명x</li>
+  <li>노트 한번 기록하는데 10분을 넘기지 말기</li>
+</ul>
+
+<h1 id="노트-템플릿">노트 템플릿</h1>
+
+<p>[개념 노트]</p>
+<ol>
+  <li>
+    <p>한 줄 정의
+Docker는 애플리케이션과 실행 환경을 컨테이너로 패키징하는 기술이다.</p>
+  </li>
+  <li>
+    <p>왜 사용하는가?
+개발 환경과 운영 환경의 차이를 줄이고, 동일한 실행 환경을 쉽게 배포하기 위해서다.</p>
+  </li>
+  <li>핵심 개념
+    <ul>
+      <li>Image: 컨테이너를 생성하기 위한 실행 템플릿</li>
+      <li>Container: 이미지로 생성되어 실행되는 인스턴스</li>
+      <li>Volume: 컨테이너 외부에 데이터를 영속적으로 저장하는 방식</li>
+    </ul>
+  </li>
+  <li>직접 해본 것
+    <ul>
+      <li>Docker 이미지 다운로드</li>
+      <li>컨테이너 실행 및 중지</li>
+      <li>Volume 연결</li>
+      <li>Docker Compose로 서비스 실행</li>
+    </ul>
+  </li>
+  <li>아직 잘 모르는 것
+    <ul>
+      <li>Docker Network의 내부 통신 방식</li>
+      <li>Bridge Network와 Host Network의 차이</li>
+    </ul>
+  </li>
+  <li>나중에 다시 확인할 질문
+    <ul>
+      <li>컨테이너를 삭제하면 Volume 데이터도 삭제될까?</li>
+      <li>이미지와 컨테이너의 차이를 설명할 수 있는가?</li>
+    </ul>
+  </li>
+</ol>
+
+<p>[실습 노트]
+목표: Ubuntu에 Nginx 컨테이너 실행하기</p>
+
+<p>실행 명령어
+docker run -d <br />
+  –name nginx-test <br />
+  -p 8080:80 <br />
+  nginx</p>
+
+<p>결과: 브라우저에서 8080 포트 접속 성공
+발생한 문제: 포트 충돌
+해결: 기존 프로세스가 사용 중인 포트를 확인하고 포트 변경
+다음에 기억할 것: 컨테이너의 포트와 호스트 포트는 서로 다르다.</p>
+
+<h1 id="노트를-다시-보지-않는-문제는-복습으로-해결하자">노트를 다시 보지 않는 문제는 복습으로 해결하자</h1>
+<p>노트를 아무리 잘 작성해도 다시 보지 않으면 도움이 안됨.
+여기서 활용할 방법은 능동적 회상(Active Recall)과 간격 반복(Spaced Repetition)</p>
+<ul>
+  <li>능동적 회상 : 자료를 보지 않고 기억을 꺼내는 방법</li>
+  <li>간격 반복 : 일정한 간격을 두고 다시 기억을 확인하는 방법</li>
+</ul>
+
+<p>복습의 예시)
+당일 — 5분
+노트를 닫고 Docker가 무엇인지 스스로 설명해 보기.</p>
+
+<p>다음 날 — 5분
+이미지와 컨테이너의 차이를 기억나는 대로 설명하기.</p>
+
+<p>3일 후 — 5분
+명령어를 보지 않고 컨테이너 실행하기.</p>
+
+<p>7일 후 — 10분
+Docker Compose로 간단한 서비스 구축하기.</p>
+
+<p>14일 후 — 10분
+다른 사람에게 Docker의 구조를 설명한다고 생각하고 말해 보기.</p>
+
+<p>30일 후 — 15분
+아무것도 보지 않고 전체 실습을 다시 진행하기.</p>
+
+<ul>
+  <li>바로 노트를 보는 것이 아니라 먼저 기억나는 것을 떠올리고 노트를 확인. =&gt; 노트 기록 시 노트 전체를 관통하는 몇가지 질문들을 미리 만들어두고 복습 시 그것을 먼저 보고 답해보기.(기억이 안난다면 다시 학습하면 되는 것)</li>
+</ul>
+
+<h1 id="학습-규칙-5가지">학습 규칙 5가지</h1>
+<ol>
+  <li>정리는 10분을 넘기지 않는다. 완벽한 노트보다 짧은 기록이 낫다.</li>
+  <li>모르는 것을 기록한다. 이미 아는 내용을 길게 옮겨 적지 않는다.</li>
+  <li>공부가 끝나면 반드시 직접 해본다. 명령어든 개념이든 결과물을 만든다.</li>
+  <li>복습은 읽기가 아니라 기억해 내는 것이다. 노트를 덮고 설명해 본다.</li>
+  <li>모든 것을 기억하려 하지 않는다. 자주 쓰는 핵심 개념은 기억하고, 나머지는 필요할 때 찾아볼 수 있도록 기록한다.</li>
+</ol>
+
+<h1 id="학습-방식">학습 방식</h1>
+<ol>
+  <li>Learn : 필요한 개념을 짧게 학습.</li>
+  <li>Practice : 직접 실행하고 오류를 해결.</li>
+  <li>Recall : 자료를 닫고 배운 내용을 설명.</li>
+  <li>Record : 핵심개념, 실습결과, 모르는 부분만 기록.</li>
+</ol>
+
+  </div>
+
+  <div class="post-navigation">
+    <a href="/">
+      ← 모든 게시글 보기
+    </a>
+  </div>
+
+</article>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        © 2026 HTKIM
+      </p>
+      <p>Built with Jekyll</p>
+    </footer>
+
+  </div>
+
+  <script>
+    const themeButton = document.getElementById("theme-toggle");
+    const themeIcon = document.getElementById("theme-icon");
+    const themeLabel = document.getElementById("theme-label");
+
+    function updateThemeButton(theme) {
+      if (theme === "dark") {
+        themeIcon.textContent = "☀";
+        themeLabel.textContent = "라이트 모드";
+      } else {
+        themeIcon.textContent = "☾";
+        themeLabel.textContent = "다크 모드";
+      }
+    }
+
+    function setTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("blog-theme", theme);
+      updateThemeButton(theme);
+    }
+
+    const currentTheme =
+      document.documentElement.getAttribute("data-theme") || "light";
+
+    updateThemeButton(currentTheme);
+
+    themeButton.addEventListener("click", function () {
+      const current =
+        document.documentElement.getAttribute("data-theme");
+
+      setTheme(current === "dark" ? "light" : "dark");
+    });
+  </script>
+</body>
+</html>

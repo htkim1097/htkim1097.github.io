@@ -1,6 +1,124 @@
-<h1 id="git-블로그-구축-01--개발-환경-준비">Git 블로그 구축 01 — 개발 환경 준비</h1>
 
-<ul>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    
+      Git 블로그 구축 01 | 나의 노트장
+    
+  </title>
+
+  <meta name="description"
+        content="개발과 기술 학습 기록">
+
+  <link rel="stylesheet"
+        href="/assets/css/style.css">
+
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("blog-theme");
+      const systemDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+
+      const theme = savedTheme || (systemDark ? "dark" : "light");
+
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+</head>
+
+<body>
+  <div class="site-wrapper">
+
+    <header class="site-header">
+      <a class="site-title" href="/">
+        나의 노트장
+      </a>
+
+      <p class="site-description">
+        개발과 기술 학습 기록
+      </p>
+
+      <nav class="site-nav">
+        <a href="/">Home</a>
+        <a href="/categories/">카테고리</a>
+        <a href="/tags/">태그</a>
+
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          type="button"
+          aria-label="테마 변경"
+        >
+          <span id="theme-icon">☾</span>
+          <span id="theme-label">다크 모드</span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      <article class="post">
+
+  <header class="post-header">
+
+    <div class="post-meta">
+      <time datetime="2026-11-07T14:00:00+09:00">
+        2026.11.07
+      </time>
+    </div>
+
+    <h1 class="post-title">Git 블로그 구축 01</h1>
+
+    
+
+    
+      <div class="post-categories">
+        
+          <a
+            class="category-label"
+            href="/categories/#개발"
+          >
+            개발
+          </a>
+        
+      </div>
+    
+
+    
+      <div class="post-tags">
+        
+          <a
+            class="tag-label"
+            href="/tags/#jekyll"
+          >
+            #Jekyll
+          </a>
+        
+          <a
+            class="tag-label"
+            href="/tags/#github"
+          >
+            #GitHub
+          </a>
+        
+          <a
+            class="tag-label"
+            href="/tags/#markdown"
+          >
+            #Markdown
+          </a>
+        
+      </div>
+    
+
+  </header>
+
+  <div class="post-content">
+    <ul>
   <li><strong>실습일:</strong> 2026-11-07</li>
   <li><strong>목표:</strong> Windows에서 VS Code를 이용해 Jekyll 기반 Git 블로그 개발 환경 구축</li>
   <li><strong>기술:</strong> Git, GitHub, Ruby, Jekyll</li>
@@ -150,3 +268,60 @@
 </ol>
 
 <p><strong>복습 방법:</strong> 답을 먼저 기억해 보고, 모르는 부분만 이 기록을 다시 확인한다.</p>
+
+  </div>
+
+  <div class="post-navigation">
+    <a href="/">
+      ← 모든 게시글 보기
+    </a>
+  </div>
+
+</article>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        © 2026 HTKIM
+      </p>
+      <p>Built with Jekyll</p>
+    </footer>
+
+  </div>
+
+  <script>
+    const themeButton = document.getElementById("theme-toggle");
+    const themeIcon = document.getElementById("theme-icon");
+    const themeLabel = document.getElementById("theme-label");
+
+    function updateThemeButton(theme) {
+      if (theme === "dark") {
+        themeIcon.textContent = "☀";
+        themeLabel.textContent = "라이트 모드";
+      } else {
+        themeIcon.textContent = "☾";
+        themeLabel.textContent = "다크 모드";
+      }
+    }
+
+    function setTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("blog-theme", theme);
+      updateThemeButton(theme);
+    }
+
+    const currentTheme =
+      document.documentElement.getAttribute("data-theme") || "light";
+
+    updateThemeButton(currentTheme);
+
+    themeButton.addEventListener("click", function () {
+      const current =
+        document.documentElement.getAttribute("data-theme");
+
+      setTheme(current === "dark" ? "light" : "dark");
+    });
+  </script>
+</body>
+</html>

@@ -469,3 +469,81 @@ html[data-theme="dark"] .theme-toggle {
 html[data-theme="dark"] .theme-toggle:hover {
   background: #303640;
 }
+
+/* ------------------------------
+   카테고리 및 태그 아카이브
+------------------------------ */
+
+.archive-page {
+  padding-top: 20px;
+}
+
+.archive-header {
+  margin-bottom: 40px;
+}
+
+.archive-header h1 {
+  margin-bottom: 10px;
+}
+
+.archive-header p {
+  color: #777;
+}
+
+.archive-group {
+  padding: 24px 0;
+  border-top: 1px solid #eeeeee;
+  scroll-margin-top: 24px;
+}
+
+.archive-group h2 {
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
+.archive-post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.archive-post-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  padding: 9px 0;
+}
+
+.archive-post-list time {
+  flex-shrink: 0;
+  color: #999;
+  font-size: 13px;
+}
+
+.archive-post-list a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.archive-post-list a:hover {
+  text-decoration: underline;
+}
+
+html[data-theme="dark"] .archive-header p,
+html[data-theme="dark"] .archive-post-list time {
+  color: #a1a1aa;
+}
+
+html[data-theme="dark"] .archive-group {
+  border-color: #33373d;
+}
+
+@media (max-width: 600px) {
+  .archive-post-list li {
+    gap: 10px;
+  }
+
+  .archive-post-list time {
+    font-size: 12px;
+  }
+}
