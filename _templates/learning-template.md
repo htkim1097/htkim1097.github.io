@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "게시글 제목"
