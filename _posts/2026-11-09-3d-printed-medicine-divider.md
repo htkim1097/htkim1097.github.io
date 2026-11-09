@@ -37,7 +37,7 @@ toc: true
 
 ### 전체 구조
 
-![모델링 사진 및 치수](/assets/images/projects/medicine-divider/blender02.png)
+![모델링 사진 및 치수](/assets/images/projects/medicine_box_divinder/blender01.png)
 
 약상자 내부에 설치할 수 있도록 바닥판과 구분용 벽을 일체형으로 구성했다.
 
@@ -45,7 +45,7 @@ toc: true
 
 ### 약상자에 맞춘 모서리 설계
 
-![모서리 라운딩](/assets/images/projects/medicine-divider/blender01.png)
+![모서리 라운딩](/assets/images/projects/medicine_box_divinder/blender02.png)
 
 기존 약상자의 내부 모서리가 직각이 아닌 라운딩 형태였기 때문에, 디바이더 역시 약상자에 밀착될 수 있도록 모서리 부분을 라운드 처리했다.
 
@@ -83,9 +83,9 @@ toc: true
 
 슬라이서에서 모델의 배치와 출력 가능 여부를 확인한 후 출력을 진행했다.
 
-![슬라이서에서 확인한 4칸 디바이더 출력 배치](/assets/images/projects/medicine-divider/slicer01.png)  
+![슬라이서에서 확인한 4칸 디바이더 출력 배치](/assets/images/projects/medicine_box_divinder/slicer01.png)  
 
-![슬라이서에서 확인한 4칸 디바이더 출력 배치](/assets/images/projects/medicine-divider/slicer02.png)
+![슬라이서에서 확인한 4칸 디바이더 출력 배치](/assets/images/projects/medicine_box_divinder/slicer02.png)
 
 약 10시간의 출력 과정을 거쳐 최종 부품을 완성했다.
 
@@ -93,7 +93,7 @@ toc: true
 
 ### 완성 결과
 
-![약상자 안에 설치해본 모습](/assets/images/projects/medicine-divider/final.png)
+![약상자 안에 설치해본 모습](/assets/images/projects/medicine_box_divinder/final.png)
 
 출력한 디바이더를 기존 약상자 내부에 설치했다.
 

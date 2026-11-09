@@ -1002,3 +1002,31 @@ html[data-theme="dark"] .post-content td {
 html[data-theme="dark"] .post-content th {
   background: #30353d;
 }
+
+/* ------------------------------
+   게시글 이미지
+------------------------------ */
+
+.post-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 24px auto;
+  border-radius: 8px;
+}
+
+.post-content figure {
+  margin: 28px 0;
+}
+
+.post-content figure img {
+  margin: 0 auto;
+}
+
+.post-content figcaption {
+  margin-top: 10px;
+  color: #888888;
+  font-size: 13px;
+  text-align: center;
+  line-height: 1.6;
+}
